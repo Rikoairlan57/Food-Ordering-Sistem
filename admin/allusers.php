@@ -161,14 +161,12 @@ session_start();
                                                 <th>Email</th>
                                                 <th>Phone</th>
 												<th>Address</th>												
-												 <th>Reg-Date</th>
-												  <th>Action</th>
+												<th>Reg-Date</th>
+												<th>Action</th>
 												 
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                           
-											
+                                        <tbody>	
 											<?php
 												$sql="SELECT * FROM users order by u_id desc";
 												$query=mysqli_query($db,$sql);
@@ -189,9 +187,11 @@ session_start();
 														    					<td>'.$rows['phone'].'</td>
 														    					<td>'.$rows['address'].'</td>																								
 														    					<td>'.$rows['date'].'</td>
-														    						 <td><a href="delete_users.php?user_del='.$rows['u_id'].'" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fa-solid fa-trash" style="font-size:16px"></i></a> 
-														    						 <a href="update_users.php?user_upd='.$rows['u_id'].'" " class="btn btn-info btn-flat btn-addon btn-sm m-b-10 m-l-5"><i class="fa-solid fa-gear"></i></a>
-														    						</td></tr>';
+														    					<td>
+                                                                                    <a href="delete_users.php?user_del='.$rows['u_id'].'" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fa-solid fa-trash" style="font-size:16px"></i></a> 
+														    						<a href="update_users.php?user_upd='.$rows['u_id'].'" " class="btn btn-info btn-flat btn-addon btn-sm m-b-10 m-l-5"><i class="fa-solid fa-gear"></i></a>
+														    					</td>
+                                                                            </tr>';
 														    	}	
 														}
 											

@@ -167,7 +167,7 @@ else
                 <!-- Start Page Content -->
                     <div class="row">
                     <div class="col-md-3">
-                        <div class="card p-30" style="background: rgb(0, 188, 126);">
+                        <div class="card p-30" style="background: rgb(255,255,0);">
                             <div class="media">
                                 <div class="media-left meida media-middle">
                                     <span><i class="fa fa-archive f-s-40" style="color: white;"></i></span>
@@ -185,7 +185,7 @@ else
                         </div>
                     </div>
 					 <div class="col-md-3">
-                        <div class="card p-30" style="background: rgb(0, 188, 126);">
+                        <div class="card p-30" style="background: rgb(0, 188, 136);">
                             <div class="media">
                                 <div class="media-left meida media-middle">
                                     <span><i class="fa fa-cutlery f-s-40" aria-hidden="true" style="color: white;"></i></span>
@@ -204,7 +204,7 @@ else
                     </div>
 					
                     <div class="col-md-3">
-                        <div class="card p-30" style="background: rgb(0, 188, 126);">
+                        <div class="card p-30" style="background: rgb(0,0,255);">
                             <div class="media">
                                 <div class="media-left meida media-middle">
                                     <span><i class="fa fa-user f-s-40 " style="color: white;"></i></span>
@@ -222,7 +222,7 @@ else
                         </div>
                     </div>		
 					<div class="col-md-3">
-                        <div class="card p-30" style="background: rgb(0, 188, 126);">
+                        <div class="card p-30" style="background: rgb(255,0,0);">
                             <div class="media">
                                 <div class="media-left meida media-middle"> 
                                     <span><i class="fa fa-shopping-cart f-s-40" aria-hidden="true" style="color: white;"></i></span>
