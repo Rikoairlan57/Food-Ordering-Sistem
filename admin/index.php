@@ -143,10 +143,6 @@ if(isset($_POST['submit1'] ))
   <script src='js/index.js'></script>
   
 
-    
-
-
-
 </body>
 
 </html>
