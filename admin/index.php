@@ -93,14 +93,14 @@ if(isset($_POST['submit1'] ))
 ?>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Angkring Dashboard Login</title>
+  	<meta charset="UTF-8">
+  	<title>Angkring Dashboard Login</title>
   
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
-  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=poppins:400,100,300,500,700,900'>
-<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
-<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+  	<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=poppins:400,100,300,500,700,900'>
+	<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
+	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
 
       <link rel="stylesheet" href="css/login.css">
       <link rel="stylesheet" href="css/green.css">
@@ -122,9 +122,9 @@ if(isset($_POST['submit1'] ))
   <form class="register-form" action="index.php" method="post">
     <input type="text" placeholder="Username" name="cr_user"/>
     <input type="text" placeholder="Email address"  name="cr_email"/>
-	 <input type="password" placeholder="Password"  name="cr_pass"/>
-	  <input type="password" placeholder="Confirm password"  name="cr_cpass"/>
-	  <input type="password" placeholder="Unique-Code"  name="code"/>
+	<input type="password" placeholder="Password"  name="cr_pass"/>
+	<input type="password" placeholder="Confirm password"  name="cr_cpass"/>
+	<input type="password" placeholder="Unique-Code"  name="code"/>
    <input type="submit"  name="submit1" value="Create" />
     <p class="message">Already registered? <a href="#">Sign In</a></p>
   </form>
