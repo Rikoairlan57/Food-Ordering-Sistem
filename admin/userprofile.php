@@ -125,8 +125,6 @@ td, th {
  <form name="updateticket" id="updatecomplaint" method="post"> 
  
  
- 
- 
 <table  border="0" cellspacing="0" cellpadding="0">
     
 <?php 
