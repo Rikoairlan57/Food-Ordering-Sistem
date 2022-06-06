@@ -65,8 +65,6 @@ hr {
   width: 94%;
 }
 
-/* Remove space from columns */
-
 .row.no-gutter {
   margin-left: 0;
   margin-right: 0;
@@ -394,7 +392,7 @@ hr {
   line-height: 1;
   background: 0 0;
   border: 1px solid transparent;
-  color: rgb(0, 188, 126);
+  color: rgb(0, 0, 0);
   border-radius: 2px;
 }
 
@@ -922,5 +920,94 @@ hr {
     padding: 10px;
     font-size: 11px;
     line-height: 20px;
+  }
+}
+
+/* ==========================
+*  Footer
+============================*/
+
+footer {
+  background: #000000;
+  padding: 90px 0;
+  z-index: 1;
+  position: relative;
+}
+
+.payment-options ul li {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+footer h5 {
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-bottom: 15px;
+}
+
+.footer-logo-block img {
+  display: block;
+  margin-bottom: 15px;
+}
+
+footer p,
+footer,
+footer span {
+  font-weight: 300;
+  color: #9c9da5;
+}
+
+.address h5 a {
+  color: rgb(0, 188, 126);
+  font-size: 26px;
+  font-family: "Give You Glory", cursive;
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+.address h5 a:hover {
+  color: #fff;
+}
+
+.popular-locations ul li {
+  display: inline-block;
+  width: 49%;
+}
+
+footer ul li {
+  margin-bottom: 6px;
+}
+
+footer ul li a {
+  color: #9c9da5;
+  transition: all 0.3s;
+}
+
+.how-it-works-links {
+  margin-bottom: 70px;
+}
+
+.address p {
+  margin-bottom: 35px;
+}
+
+footer ul li a:hover {
+  color: rgb(0, 188, 126);
+}
+
+footer li a {
+  line-height: 20px;
+  display: inline-block;
+}
+
+.payment-options ul {
+  margin-top: 10px;
+  float: left;
+  width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .footer-logo-block {
+    margin-bottom: 25px;
   }
 }
