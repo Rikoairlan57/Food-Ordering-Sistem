@@ -1,0 +1,557 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+body {
+  background: rgba(252, 251, 249, 0.68);
+  font-size: 16px;
+  color: #4d4f56;
+  font-weight: 400;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ==========================
+*   Typohraphy
+============================*/
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  color: #25282b;
+}
+
+a {
+  color: rgb(0, 188, 126);
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(5, 161, 109);
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #404048;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid #eaebeb;
+}
+
+/*==================================
+* Bootstrap grid tweaks
+*===================================*/
+
+.container {
+  max-width: 1270px;
+  width: 94%;
+}
+
+/* Remove space from columns */
+
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter [class*="col-"]:not(:first-child),
+.row.no-gutter [class*="col-"]:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.page-wrapper {
+  padding-top: 68px;
+}
+
+.inner-page {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+/*==================================
+* Foms
+*===================================*/
+
+.custom-control-input:checked ~ .custom-control-indicator {
+  color: #fff;
+  background-color: rgb(0, 188, 126);
+  margin-top: 0;
+  padding: 10px;
+  border-radius: 100%;
+}
+
+.custom-checkbox .custom-control-indicator {
+  border-radius: 100%;
+}
+
+.custom-control-indicator {
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 1px 3px rgba(93, 92, 99, 0.05);
+  border: 1px solid rgba(116, 135, 150, 0.23);
+}
+
+.custom-control-input:focus ~ .custom-control-indicator {
+  -webkit-box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.2rem rgb(0, 188, 126);
+  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.2rem rgb(0, 188, 126);
+}
+
+/* .custom-radio .custom-control-input:checked ~ .custom-control-indicator {
+  
+} */
+
+.custom-control-input:active ~ .custom-control-indicator {
+  color: #fff;
+  background-color: rgb(0, 188, 126);
+}
+
+.custom-control-input:disabled ~ .custom-control-indicator {
+  cursor: not-allowed;
+  background-color: #eee;
+}
+
+.custom-control-input:disabled ~ .custom-control-description {
+  color: #cfcfcf;
+}
+
+.custom-control {
+  padding-left: 30px;
+}
+
+.form-control {
+  border: 1px solid #eaebeb;
+  border-radius: 3rem;
+}
+
+.custom-select {
+  line-height: 1;
+}
+
+/* ==========================
+*   Buttons
+============================*/
+
+.form-control-lg,
+.dropdown-menu,
+.btn,
+.btn-group-lg > .btn,
+.btn-lg,
+.img-rounded {
+  border-radius: 2px;
+}
+
+.btn {
+  transition: all 0.4s;
+}
+
+.btn-secondary {
+  color: #373a3c;
+  background-color: rgba(252, 251, 249, 0.68);
+  border-color: #eaebeb;
+}
+
+.theme-btn {
+  background-color: rgb(0, 188, 126);
+  border-color: rgb(0, 188, 126);
+  color: #fff;
+}
+
+.theme-btn-dash {
+  border: 2px dashed rgb(0, 188, 126);
+  background-color: transparent;
+  color: rgb(0, 188, 126);
+}
+
+.theme-btn-dash:hover,
+.theme-btn,
+.theme-btn.btn-lg:hover,
+.btn-secondary:hover {
+  background-color: rgb(0, 188, 126);
+  color: #fff;
+  border: 1px solid rgb(0, 188, 126);
+}
+
+.theme-btn-dash:hover {
+  border: 2px solid rgb(0, 188, 126);
+  color: #fff;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.primary-color {
+  color: rgb(0, 188, 126);
+}
+
+/* ==========================
+*   Helpers
+============================*/
+
+.space-xs {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.space-sm {
+  padding-bottom: 30;
+  padding-top: 30px;
+}
+
+.space-md {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.m-b-10 {
+  margin-bottom: 10px;
+}
+
+.m-b-20 {
+  margin-bottom: 20px;
+}
+
+.m-b-30 {
+  margin-bottom: 30px;
+}
+
+.m-t-10 {
+  margin-top: 10px;
+}
+
+.m-t-20 {
+  margin-top: 20px;
+}
+
+.m-t-30 {
+  margin-top: 30px;
+}
+
+.b-l {
+  border-left: 1px solid #3cee1d;
+}
+
+.b-r {
+  border-left: 1px solid #3cee1d;
+}
+
+.b-t {
+  border-top: 1px solid #3cee1d;
+}
+
+.b-b {
+  border-bottom: 1px solid #3cee1d;
+}
+
+.b-b-0 {
+  border-bottom: none !important;
+}
+
+.b-t-0 {
+  border-top: none !important;
+}
+
+.b-l-0 {
+  border-left: none !important;
+}
+
+.b-r-0 {
+  border: 2px solid #ccc;
+}
+
+.align-wrap {
+  display: inline-table;
+  min-height: 100%;
+}
+
+.align-vertical {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.font-white {
+  color: #fff;
+}
+
+/* ============================
+* PAGINATION
+==============================*/
+
+.page-item.disabled .page-link,
+.page-item.disabled .page-link:focus,
+.page-item.disabled .page-link:hover {
+  border-color: #eaebeb;
+}
+
+.page-link {
+  color: inherit;
+  background-color: #fff;
+  border: 1px solid #eaebeb;
+}
+
+.page-item.active .page-link,
+.page-item.active .page-link:focus,
+.page-item.active .page-link:hover {
+  background-color: rgb(0, 188, 126);
+  border-color: rgb(0, 188, 126);
+}
+
+/* ==========================
+*   Header and navigation
+============================*/
+
+#header {
+  position: fixed;
+  width: 100%;
+  border: 0;
+  z-index: 99;
+}
+
+.nav-fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar {
+  padding: 1rem 2rem;
+  border-radius: 0;
+}
+
+.navbar-nav .nav-item {
+  padding-left: 10px;
+}
+
+.navbar-dark .navbar-toggler {
+  background-image: none;
+  border-color: transparent;
+}
+
+@media (max-width: 62em) {
+  .navbar-nav {
+    padding-top: 0.425rem;
+    padding-left: 0.75rem;
+  }
+  .navbar-nav .nav-item {
+    text-align: center;
+  }
+  .navbar-brand {
+    float: right;
+  }
+
+  .navbar-nav .nav-item + .nav-item {
+    margin-left: 0;
+  }
+  .dropdown-menu {
+    position: relative;
+    float: none;
+    background-color: transparent;
+  }
+  .dropdown-menu a {
+    color: #fff;
+  }
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: red;
+}
+
+.headroom--pinned {
+  display: block;
+}
+
+.headroom--unpinned {
+  display: none;
+}
+
+.navbar-fixed-top {
+  position: fixed;
+}
+
+.navbar-toggler {
+  padding: 4px 0;
+  font-size: 1.25rem;
+  line-height: 1;
+  background: 0 0;
+  border: 1px solid transparent;
+  color: rgb(0, 188, 126);
+  border-radius: 2px;
+}
+
+/********* top links part ***********/
+
+.top-links {
+  padding: 15px 0;
+  border-bottom: 1px solid #eaebeb;
+}
+
+.top-links ul {
+  margin-bottom: 0;
+}
+
+.link-item a {
+  font-size: 12px;
+  color: #414551;
+}
+
+.link-item.active span {
+  background-color: rgb(0, 188, 126);
+  color: #fff;
+}
+
+.links {
+  display: block;
+}
+
+.links span {
+  border: 1px solid #eaebeb;
+  border-radius: 100px;
+  width: 32px;
+  height: 32px;
+  color: #3a3e47;
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 18px;
+  text-align: center;
+  line-height: 28px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.links li:hover span {
+  background-color: rgb(5, 161, 109);
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  .top-links {
+    display: none;
+  }
+}
+
+/* ==========================
+*   Hero
+============================*/
+
+.hero {
+  padding-top: 12%;
+  padding-bottom: 10%;
+  text-align: center;
+  position: relative;
+}
+
+.hero h1 {
+  font-family: "Give You Glory", cursive;
+  color: #fff;
+  font-size: 3.7em;
+  font-weight: 700;
+}
+
+.hero:before {
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(7, 6, 29, 0.37);
+}
+
+.hero .hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================
+*   Hero steps
+============================*/
+
+.step-item {
+  display: inline-block;
+  margin: 0 40px 0;
+  position: relative;
+}
+
+.banner-form {
+  margin-bottom: 60px;
+  display: block;
+  margin-top: 20px;
+}
+
+.step-item svg {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+}
+
+.step-item img {
+  display: block;
+  margin: 0 auto 15px;
+}
+
+.step-item h4 {
+  font-family: "Give You Glory", cursive;
+  color: #fff;
+  font-size: 21px;
+}
+
+.step-item h4 span {
+  color: rgb(0, 188, 126);
+}
+
+.step1:after,
+.step2:after {
+  position: absolute;
+  content: "";
+  right: -58%;
+  top: -20%;
+  width: 130px;
+  height: 32px;
+  background: url(../images/arrow.png);
+}
+
+.step2:after {
+  background: url(../images/arrow-dotted.png);
+  height: 25px;
+  right: -95%;
+  top: -15%;
+}
+
+@media (max-width: 568px) and (min-width: 280px) {
+  .step1:after,
+  .step2:after {
+    display: none;
+  }
+  .hero h1 {
+    font-size: 2.2em;
+    padding-top: 75px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .step-item {
+    margin: 0 30px 0;
+  }
+}

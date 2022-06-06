@@ -187,7 +187,8 @@ while($row=mysqli_fetch_array($ret2))
     <tr>
   
       <td colspan="2">   
-      <input name="Submit2" type="submit" class="btn btn-danger" value="Close this window " onClick="return f2();" style="cursor: pointer;"  /></td>
+        <input name="Submit2" type="submit" class="btn btn-danger" value="Close this window " onClick="return f2();" style="cursor: pointer;"  />
+      </td>
     </tr>
    
     <?php } 
