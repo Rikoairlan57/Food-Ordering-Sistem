@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+include("connection/connect.php");  
+error_reporting(0);  
+session_start();
+
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
-    <title>Foodie Restauarants</title>
+    <title>Angkringan</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -105,14 +111,51 @@
         <section class="popular">
             <div class="container">
                 <div class="title text-xs-center m-b-30" >
-                    <h2 class= "title">Best Seller</h2>
+                    <h2 class= "title">Best Seller in this Month</h2>
+                    <p class="subTitle">Our top selling dishes this month</p>
+                </div>
+                <div class="row">
+
+						<?php 
+						// fetch records from database to display popular first 3 dishes from table
+						$query_res= mysqli_query($db,"select * from dishes LIMIT 3"); 
+							while($r=mysqli_fetch_array($query_res))
+							{
+									
+						         echo ' <div class="col-xs-12 col-sm-6 col-md-4 food-item">
+										<div class="food-item-wrap box">
+											<div class="figure-wrap bg-image" data-image-src="admin/Res_img/dishes/'.$r['img'].'">
+												<div class="distance"><i class="fa fa-pin"></i>150m</div>
+												<div class="stars rating pull-left" "> 
+                                                      <i class="fa fa-star" ></i> 
+                                                      <i class="fa fa-star"></i> 
+                                                      <i class="fa fa-star"></i> 
+                                                      <i class="fa fa-star"></i> 
+                                                      <i class="fa fa-star-o"></i> 
+                                                  </div>
+												<div class="review pull-right"><a href="#">367 reviews</a> </div>
+											</div>
+											<div class="content">
+												<h5><a href="dishes.php?res_id='.$r['rs_id'].'">'.$r['title'].'</a></h5>
+												<div class="product-name">'.$r['slogan'].'</div>
+												<div class="price-btn-block"> <span class="price">$'.$r['price'].'</span> <a href="dishes.php?res_id='.$r['rs_id'].'" class="btn ctaBtn  pull-right">Order Now</a> </div>
+											</div>
+											
+										</div>
+								</div>';
+									
+							}
+						
+						
+						?>
+				
                 </div>
             </div>
         </section>
         <!-- Popular block ends -->
         
        
-  <!-- FOOTER SECTION ----------------------- -->
+        <!-- FOOTER SECTION ----------------------- -->
         <section class="popular">
             <div class="container">
                 <div class="title text-xs-center m-b-30" >
