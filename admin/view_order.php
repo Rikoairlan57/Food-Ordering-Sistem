@@ -194,19 +194,7 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 											        </td>
 												  
 																																					
-											</tr>	
-											<tr>
-												<td><strong>Title:</strong></td>
-												    <td><center><?php echo $rows['title']; ?></center></td>
-													    <td>
-                                                            <center>
-													            <a href="javascript:void(0);" onClick="popUpWindow('userprofile.php?newform_id=<?php echo htmlentities($rows['o_id']);?>');" title="Update order">
-														            <button type="button" class="btn btn-primary">View User Detials</button>
-                                                                </a>
-													        </center>
-                                                        </td>
-												   																								
-											</tr>	
+											</tr>		
 											<tr>
 													<td><strong>Quantity:</strong></td>
 												    <td><center><?php echo $rows['quantity']; ?></center></td>
