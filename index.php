@@ -10,7 +10,6 @@ session_start();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
@@ -126,13 +125,6 @@ session_start();
 										<div class="food-item-wrap box">
 											<div class="figure-wrap bg-image" data-image-src="admin/Res_img/dishes/'.$r['img'].'">
 												<div class="distance"><i class="fa fa-pin"></i>150m</div>
-												<div class="stars rating pull-left" "> 
-                                                      <i class="fa fa-star" ></i> 
-                                                      <i class="fa fa-star"></i> 
-                                                      <i class="fa fa-star"></i> 
-                                                      <i class="fa fa-star"></i> 
-                                                      <i class="fa fa-star-o"></i> 
-                                                  </div>
 												<div class="review pull-right"><a href="#">367 reviews</a> </div>
 											</div>
 											<div class="content">
