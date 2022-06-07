@@ -100,6 +100,53 @@ session_start();
                         <!-- restaurants filter nav ends -->
                     </div>
                 </div>
+                 <!-- restaurants listing starts -->
+                <div class="row">
+                    <div class="restaurant-listing">
+						<?php  //fetching records from table and filter using html data-filter tag
+						$ress= mysqli_query($db,"select * from restaurant");  
+						while($rows=mysqli_fetch_array($ress))
+						{
+							$query= mysqli_query($db,"select * from res_category where c_id='".$rows['c_id']."' ");
+							$rowss=mysqli_fetch_array($query);
+							echo'<div class="col-xs-12 col-sm-12 col-md-6 single-restaurant all '.$rowss['c_name'].'">
+									<div class="restaurant-wrap">
+										<div class="row">
+											<div class=" col-xs-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
+												<a class="restaurant-logo" href="dishes.php?res_id='.$rows['rs_id'].'" > <img src="admin/Res_img/'.$rows['image'].'" alt="Restaurant logo"> </a>
+											</div>
+											<!--end:col -->
+											<div class="col-xs-12 col-sm-9 col-md-12 col-lg-9">
+												<h5><a href="dishes.php?res_id='.$rows['rs_id'].'" >'.$rows['title'].'</a></h5> <span>'.$rows['address'].'</span>
+												<div class="bottom-part">
+													<div class="cost"><i class="fa fa-check"></i> Min Rp.30000</div>
+													<div class="mins"><i class="fa fa-motorcycle"></i> 30 min</div>
+													<div class="ratings"> <span>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star"></i>
+															<i class="fa fa-star-o"></i>
+														</span> (122) </div>
+												</div>
+											</div>
+											<!-- end:col -->
+										</div>
+										<!-- end:row -->
+									</div>
+									<!--end:Restaurant wrap -->
+								</div>';
+						}
+						
+						
+						?>
+						
+							
+						
+					
+                    </div>
+                </div>
+                <!-- restaurants listing ends -->
             </div>
         </section>               
 
