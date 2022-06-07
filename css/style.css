@@ -413,7 +413,7 @@ hr {
 }
 
 .link-item.active span {
-  background-color: rgb(0, 188, 126);
+  background-color: rgb(0, 128, 0);
   color: #fff;
 }
 
@@ -516,7 +516,7 @@ hr {
 }
 
 .step-item h4 span {
-  color: rgb(0, 188, 126);
+  color: rgb(0, 128, 0);
 }
 
 .step1:after,

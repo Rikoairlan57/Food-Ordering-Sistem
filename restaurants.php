@@ -68,8 +68,11 @@ session_start();
             </div>
         </div>
         <!-- end:Top links -->
- 
-                    
+        <!-- start inner page hero -->
+        <div class="inner-page-hero bg-image" data-image-src="images/image4.jpg">
+            <div class="container"> </div>
+             <!-- end:Container -->
+        </div>        
 
         <!-- FOOTER SECTION ----------------------- -->
         <section class="footerSection">
