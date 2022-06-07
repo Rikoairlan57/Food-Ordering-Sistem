@@ -198,7 +198,7 @@ session_start();
 																		
 																					<td>'.$rows['title'].'</td>
 																					<td>'.$rows['slogan'].'</td>
-																					<td>$'.$rows['price'].'</td>
+																					<td>Rp.'.$rows['price'].'</td>
 																					
 																					
 																					<td>

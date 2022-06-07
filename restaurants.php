@@ -12,7 +12,7 @@ session_start();
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
-    <title>Foodie Restaurant</title>
+    <title>Angkringan</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -69,10 +69,39 @@ session_start();
         </div>
         <!-- end:Top links -->
         <!-- start inner page hero -->
-        <div class="inner-page-hero bg-image" data-image-src="images/image4.jpg">
+        <div class="inner-page-hero bg-image" data-image-src="images/jengkol_balado.jpg">
             <div class="container"> </div>
              <!-- end:Container -->
-        </div>        
+        </div>
+        <section class="featured-restaurants">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="title-block pull-left">
+                            <h4 class= "title">Filter Restaurants</h4> 
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <!-- restaurants filter nav starts -->
+                        <div class="restaurants-filter pull-right">
+                            <nav class="primary pull-left">
+                                <ul>
+                                    <li><a href="#" class="selected" data-filter="*">all</a> </li>
+									<?php 
+									$res= mysqli_query($db,"select * from res_category");
+									      while($row=mysqli_fetch_array($res))
+										  {
+											echo '<li><a href="#" data-filter=".'.$row['c_name'].'"> '.$row['c_name'].'</a> </li>';
+										  }
+									?>                                 
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- restaurants filter nav ends -->
+                    </div>
+                </div>
+            </div>
+        </section>               
 
         <!-- FOOTER SECTION ----------------------- -->
         <section class="footerSection">
