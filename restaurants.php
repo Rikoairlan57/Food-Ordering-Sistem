@@ -57,10 +57,17 @@ session_start();
     <!-- /.navbar -->
     </header>
     <div class="page-wrapper">
-            
-        <div>
-            <h1>content</h1>
+        <!-- top Links -->
+        <div class="top-links">
+            <div class="container">
+                <ul class="row links">
+                    <li class="col-xs-12 col-sm-4 link-item active"><span>1</span><a href="restaurants.php">Choose Restaurant</a></li>
+                    <li class="col-xs-12 col-sm-4 link-item"><span>2</span><a href="#">Pick Your favorite food</a></li>
+                    <li class="col-xs-12 col-sm-4 link-item"><span>3</span><a href="#">Order and Pay online</a></li>
+                </ul>
+            </div>
         </div>
+        <!-- end:Top links -->
  
                     
 
