@@ -2,7 +2,7 @@ Membuat Project Food-Ordering-Sistem menggunakan PHP native
 
 alur Pengerjaan
 
-1. Membuat UI Menggunakan Figma Progress ✔
+1. Membuat UI Menggunakan Figma ✔
 2. Membuat DataBase Menggunakan MYSQL ✔
 3. Membuat Template admin ✔
     - admin CRUD
