@@ -62,7 +62,7 @@ if(isset($_POST['submit'] ))
 					    }
 					    setInterval(function(){ countdown(); },1000);
 					</script>'";
-		 header("refresh:5;url=login.php"); 
+		 header("refresh:3;url=login.php"); 
     }
 	}
 
@@ -87,7 +87,7 @@ if(isset($_POST['submit'] ))
     <link href="css/animate.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet"> 
-    <link href="footer.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
     </head>
 <body>
      
@@ -139,63 +139,60 @@ if(isset($_POST['submit'] ))
            </div>
         </div>
         <section class="contact-page inner-page">
-               <div class="container">
-                  <div class="row">
-                     <!-- REGISTER -->
-                     <div class="col-md-8">
-                        <div class="widget">
-                           <div class="widget-body">
-                              
-							  <form action="" method="post">
-                                 <div class="row">
-								  <div class="form-group col-sm-12">
-                                       <label for="exampleInputEmail1">Username</label>
-                                       <input class="form-control" type="text" name="username" id="example-text-input" placeholder="Username"> 
-                                    </div>
-                                    <div class="form-group col-sm-6">
-                                       <label for="exampleInputEmail1">First Name</label>
-                                       <input class="form-control" type="text" name="firstname" id="example-text-input" placeholder="First Name"> 
-                                    </div>
-                                    <div class="form-group col-sm-6">
-                                       <label for="exampleInputEmail1">Last Name</label>
-                                       <input class="form-control" type="text" name="lastname" id="example-text-input-2" placeholder="Last Name"> 
-                                    </div>
-                                    <div class="form-group col-sm-6">
-                                       <label for="exampleInputEmail1">Email address</label>
-                                       <input type="text" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> <small id="emailHelp" class="form-text text-muted">We"ll never share your email with anyone else.</small> 
-                                    </div>
-                                    <div class="form-group col-sm-6">
-                                       <label for="exampleInputEmail1">Phone number</label>
-                                       <input class="form-control" type="text" name="phone" id="example-tel-input-3" placeholder="Phone"> <small class="form-text text-muted">We"ll never share your email with anyone else.</small> 
-                                    </div>
-                                    <div class="form-group col-sm-6">
-                                       <label for="exampleInputPassword1">Password</label>
-                                       <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password"> 
-                                    </div>
-                                    <div class="form-group col-sm-6">
-                                       <label for="exampleInputPassword1">Repeat password</label>
-                                       <input type="password" class="form-control" name="cpassword" id="exampleInputPassword2" placeholder="Password"> 
-                                    </div>
-									 <div class="form-group col-sm-12">
-                                       <label for="exampleTextarea">Delivery Address</label>
-                                       <textarea class="form-control" id="exampleTextarea"  name="address" rows="3"></textarea>
-                                    </div>
-                                   
-                                 </div>
-                                
-                                 <div class="row">
-                                    <div class="col-sm-4">
-                                       <p> <input type="submit" value="Register" name="submit" class="btn input theme-btn"> </p>
-                                    </div>
-                                 </div> 
-                              </form>
-                           
-						   </div>
-                           <!-- end: Widget -->
-                        </div>
-                        <!-- /REGISTER -->
-                     </div>    
-                </div>
+            <div class="container">
+              <div class="row">
+                 <!-- REGISTER -->
+                <div class="col-md-8">
+                    <div class="widget">
+                       <div class="widget-body">
+					  <form action="" method="post">
+                             <div class="row">
+						  <div class="form-group col-sm-12">
+                                   <label for="exampleInputEmail1">Username</label>
+                                   <input class="form-control" type="text" name="username" id="example-text-input" placeholder="Username"> 
+                                </div>
+                                <div class="form-group col-sm-6">
+                                   <label for="exampleInputEmail1">First Name</label>
+                                   <input class="form-control" type="text" name="firstname" id="example-text-input" placeholder="First Name"> 
+                                </div>
+                                <div class="form-group col-sm-6">
+                                   <label for="exampleInputEmail1">Last Name</label>
+                                   <input class="form-control" type="text" name="lastname" id="example-text-input-2" placeholder="Last Name"> 
+                                </div>
+                                <div class="form-group col-sm-6">
+                                   <label for="exampleInputEmail1">Email address</label>
+                                   <input type="text" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> <small id="emailHelp" class="form-text text-muted">We"ll never share your email with anyone else.</small> 
+                                </div>
+                                <div class="form-group col-sm-6">
+                                   <label for="exampleInputEmail1">Phone number</label>
+                                   <input class="form-control" type="text" name="phone" id="example-tel-input-3" placeholder="Phone"> <small class="form-text text-muted">We"ll never share your email with anyone else.</small> 
+                                </div>
+                                <div class="form-group col-sm-6">
+                                   <label for="exampleInputPassword1">Password</label>
+                                   <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password"> 
+                                </div>
+                                <div class="form-group col-sm-6">
+                                   <label for="exampleInputPassword1">Repeat password</label>
+                                   <input type="password" class="form-control" name="cpassword" id="exampleInputPassword2" placeholder="Password"> 
+                                </div>
+							 <div class="form-group col-sm-12">
+                                   <label for="exampleTextarea">Delivery Address</label>
+                                   <textarea class="form-control" id="exampleTextarea"  name="address" rows="3"></textarea>
+                                </div>
+                             </div>
+                             <div class="row">
+                                <div class="col-sm-4">
+                                   <p> <input type="submit" value="Register" name="submit" class="btn input theme-btn"> </p>
+                                </div>
+                             </div> 
+                          </form>
+                       
+				   </div>
+                       <!-- end: Widget -->
+                    </div>
+                    <!-- /REGISTER -->
+                </div>    
+            </div>
         </section>
 
         <!-- FOOTER SECTION ----------------------- -->

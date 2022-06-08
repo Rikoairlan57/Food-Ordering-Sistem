@@ -21,7 +21,7 @@ session_start();
     <link href="css/animate.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet"> 
-    <link href="footer.css" rel="stylesheet"> 
+    <link href="css/footer.css" rel="stylesheet"> 
 </head>
 
 <body class="home">

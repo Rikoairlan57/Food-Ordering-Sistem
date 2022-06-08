@@ -12,7 +12,7 @@ session_start();
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
-    <title>Foodie Restaurant</title>
+    <title>Angkring</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -20,7 +20,7 @@ session_start();
     <link href="css/animate.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="footer.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
  </head>
 
 <body>
@@ -121,13 +121,15 @@ session_start();
 												<div class="bottom-part">
 													<div class="cost"><i class="fa fa-check"></i> Min Rp.30000</div>
 													<div class="mins"><i class="fa fa-motorcycle"></i> 30 min</div>
-													<div class="ratings"> <span>
+													<div class="ratings" style="color: yellow;"> 
+                                                        <span>
 															<i class="fa fa-star"></i>
 															<i class="fa fa-star"></i>
 															<i class="fa fa-star"></i>
 															<i class="fa fa-star"></i>
 															<i class="fa fa-star-o"></i>
-														</span> (122) </div>
+														</span> (122) 
+                                                    </div>
 												</div>
 											</div>
 											<!-- end:col -->

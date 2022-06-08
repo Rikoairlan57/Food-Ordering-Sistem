@@ -1,0 +1,389 @@
+.headerBg{
+  background: rgb(56, 70, 65);
+}
+.hoverBorder{
+  border: 1px solid rgb(0, 188, 126);
+}
+.bgGreen {
+  background: rgb(0, 188, 126);
+  padding: 10px 15px;
+  border-radius: 3rem;
+}
+
+.bgGreen:hover {
+  background: rgb(68, 95, 85);
+}
+.navbar-brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.navbar-brand span {
+  font-size: 1.2rem;
+  color: rgb(0, 188, 126);
+}
+
+.input {
+  border-radius: 3rem;
+  border: none;
+  outline: none;
+}
+.greenBg{
+  background: rgb(0, 188, 126);
+}
+.input.btn {
+  border-radius: 3rem;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background:rgb(0, 188, 126) ;
+  padding: 15px 20px;
+  color: white;
+  margin-left: 10px;
+  
+}
+.input.btn:hover {
+  background:rgb(68, 95, 85);
+ 
+}
+.ctaBtn {
+  border-radius: 3rem;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid rgb(0, 188, 126) ;;
+  outline: none;
+  background:none;
+  padding: 10px 25px;
+  color: rgb(0, 188, 126) ;
+  
+}
+.ctaBtn:hover {
+  background:rgb(0, 188, 126) ;
+  color: white;
+ 
+}
+
+.kyi{
+  background: aqua;
+}
+
+.box{
+  border-radius: 10px;
+  transition: .3s ease;
+}
+
+
+.box:hover{
+  box-shadow: 0px 2px 4px rgba(77, 156, 107, 0.356);
+  transform: translateY(-6px);
+}
+
+/* ABOUT SECTION  */
+
+.sectionIntro {
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+  margin: 0 auto 1rem;
+}
+
+.title{
+  color: rgb(29, 29, 29);
+  font-size: 30px;
+  font-weight: 700;
+}
+.subTitle{
+  font-weight: 500;
+  font-size: 15px;
+  max-width: 60%;
+  text-align: center;
+  margin: auto;
+}
+.sectionData {
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+}
+
+.rightImgs {
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+}
+
+.rightImgs .rightImg {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+.leftImg  {
+  width: 100%;
+  overflow: hidden;
+}
+
+.leftImg  img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.rightImgs .rightImg img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.sectionData .leftImg,
+.rightImgs div {
+  position: relative;
+  display: grid;
+}
+ 
+
+.sectionData .leftImg::before,
+.rightImgs div::before {
+  position: absolute;
+  content: "Foodie..";
+  height: 0%;
+  width: 90%;
+  background: rgba(0, 188, 125, 0.712);
+  color: white;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sectionData .leftImg:hover::before,
+.rightImgs div:hover::before {
+  height: 70%;
+}
+
+.sectionData .leftImg,
+.rightImgs div {
+  position: relative;
+}
+
+.sectionData .leftImg::after,
+.rightImgs div::after {
+  position: absolute;
+  content: "NEW";
+  height: 10px;
+  width: 80px;
+  background: rgb(0, 188, 126) ;
+  color: white;
+  top: 5%;
+  left: 5%;
+  font-size: 15px;
+  padding: .8rem .5rem ;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+   justify-content: center;
+  border-radius: 5px;
+}
+
+/* Footer Section  */
+
+.footerSection {
+  width: 100%;
+  background: rgb(72, 93, 86);
+  padding: 5rem 0 1rem;
+  color: white;
+}
+
+.footerSection .contentContainer {
+  width: 90%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+}
+
+.footerSection .contentContainer .footerIntro {
+  color: white;
+}
+
+.footerSection .contentContainer .footerIntro .footerLogoDiv .hotelName {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.footerSection .contentContainer .footerIntro .footerLogoDiv .hotelName span {
+  color: rgb(0, 188, 126);
+  font-size: 2rem;
+}
+
+.footerSection .contentContainer .footerIntro p {
+  font-size: 15px;
+  padding: 1rem 0;
+}
+
+.footerSection .contentContainer .footerIntro .footContactDetails .info span {
+  font-size: 15px;
+}
+
+.footerSection .contentContainer .footerIntro .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.footerSection .contentContainer .footerIntro .info span:hover {
+  color: rgb(205, 211, 204);
+}
+
+.footerSection .contentContainer .footerIntro .info .iconDiv {
+  color: #ccc;
+  margin-right: 0.5rem;
+}
+
+h5 {
+  color: white;
+}
+
+.footerSection .contentContainer .footerIntro .info .iconDiv .bx {
+  font-size: 1.5rem;
+  -webkit-transform: translateY(3px);
+  transform: translateY(3px);
+}
+
+.footerSection .contentContainer .footersectionTitle {
+  color: white;
+  font-weight: 600;
+  border-left: 2px solid rgb(0, 188, 126);
+  padding: 0 10px;
+  -webkit-transform: translateX(-6px);
+  transform: translateX(-6px);
+}
+
+.footerSection .contentContainer .linksDiv {
+  border-left: 1px solid rgba(204, 204, 204, 0.349);
+  padding: 0 10px;
+  color: #ccc;
+}
+
+.footerSection .contentContainer .linksDiv li a {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.footerSection .contentContainer .linksDiv li a:hover {
+  color: rgb(0, 188, 126);
+}
+
+.footerSection .contentContainer .linksDiv ul {
+  display: -ms-grid;
+  display: grid;
+  font-size: 15px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.footerSection .contentContainer .linksDiv ul span {
+  padding: 5px 0;
+}
+.footerSection .contentContainer .linksDiv ul span:hover {
+  color: rgb(0, 188, 126);
+}
+
+.footerSection .contentContainer .linksDiv label {
+  font-size: 15px;
+}
+
+.footerSection .contentContainer .linksDiv form {
+  padding-top: 1rem;
+}
+
+.footerSection .contentContainer .linksDiv input {
+  width: 100%;
+  border: 1.5px solid rgba(204, 204, 204, 0.349);
+  background: rgba(255, 255, 255, 0.226);
+  padding: 8px 5px;
+  margin-bottom: 0.5rem;
+  outline: none;
+  color: #ccc;
+}
+
+.footerSection .contentContainer .linksDiv button {
+  display: block;
+  width: 100%;
+  padding: 8px 5px;
+  border: none;
+  outline: none;
+  background: rgb(0, 188, 126);
+  color: whitesmoke;
+}
+
+.footerSection .contentContainer .linksDiv button:hover {
+  background: rgb(74, 110, 98);
+}
+
+.footerSection .copyrightDiv {
+  width: 100%;
+  margin: 1rem auto 0;
+  text-align: center;
+  color: #ccc;
+  font-size: 12px;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+.footerSection .copyrightDiv span {
+  color: rgb(0, 188, 126);
+}
+
+@media screen and (min-width: 576px) {
+  .contentContainer, .rightImgs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 768px) {
+  .contentContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .sectionData {
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1148px) {
+  .contentContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footerSection .contentContainer .linksDiv ul span {
+    padding: 5px 0;
+    font-size: 15px;
+  }
+
+  .leftImg  {
+    width: 100%;
+    overflow: hidden;
+    height: 415px;
+  }
+  .leftImg img {
+    width: 100%;
+    height: 100%;
+   object-fit: cover;
+  }
+}
