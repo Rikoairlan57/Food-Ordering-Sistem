@@ -1,57 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-session_start(); 
-error_reporting(0); 
-include("connection/connect.php"); 
-if(isset($_POST['submit'] )) 
-{
-     if(empty($_POST['firstname']) ||  
-   	    empty($_POST['lastname'])|| 
-		empty($_POST['email']) ||  
-		empty($_POST['phone'])||
-		empty($_POST['password'])||
-		empty($_POST['cpassword']) ||
-		empty($_POST['cpassword']))
-		{
-			$message = "All fields must be Required!";
-		}
-	else
-	{
-	$check_username= mysqli_query($db, "SELECT username FROM users where username = '".$_POST['username']."' ");
-	$check_email = mysqli_query($db, "SELECT email FROM users where email = '".$_POST['email']."' ");
-		
+session_start();
+error_reporting(0);
+include("connection/connect.php");
+if (isset($_POST['submit'])) {
+    if (
+        empty($_POST['firstname']) ||
+        empty($_POST['lastname']) ||
+        empty($_POST['email']) ||
+        empty($_POST['phone']) ||
+        empty($_POST['password']) ||
+        empty($_POST['cpassword']) ||
+        empty($_POST['cpassword'])
+    ) {
+        $message = "All fields must be Required!";
+    } else {
+        $check_username = mysqli_query($db, "SELECT username FROM users where username = '" . $_POST['username'] . "' ");
+        $check_email = mysqli_query($db, "SELECT email FROM users where email = '" . $_POST['email'] . "' ");
 
-	
-	if($_POST['password'] != $_POST['cpassword']){  
-       	$message = "Password not match";
-    }
-	elseif(strlen($_POST['password']) < 6)  
-	{
-		$message = "Password Must be >=6";
-	}
-	elseif(strlen($_POST['phone']) < 10) 
-	{
-		$message = "invalid phone number!";
-	}
 
-    elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) 
-    {
-       	$message = "Invalid email address please type a valid email!";
-    }
-	elseif(mysqli_num_rows($check_username) > 0) 
-     {
-    	$message = 'username Already exists!';
-     }
-	elseif(mysqli_num_rows($check_email) > 0)
-     {
-    	$message = 'Email Already exists!';
-     }
-	else{
-       
-	$mql = "INSERT INTO users(username,f_name,l_name,email,phone,password,address) VALUES('".$_POST['username']."','".$_POST['firstname']."','".$_POST['lastname']."','".$_POST['email']."','".$_POST['phone']."','".md5($_POST['password'])."','".$_POST['address']."')";
-	mysqli_query($db, $mql);
-		$success = "Account Created successfully! <p>You will be redirected in <span id='counter'>5</span> second(s).</p>
+
+        if ($_POST['password'] != $_POST['cpassword']) {
+            $message = "Password not match";
+        } elseif (strlen($_POST['password']) < 6) {
+            $message = "Password Must be >=6";
+        } elseif (strlen($_POST['phone']) < 10) {
+            $message = "invalid phone number!";
+        } elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            $message = "Invalid email address please type a valid email!";
+        } elseif (mysqli_num_rows($check_username) > 0) {
+            $message = 'username Already exists!';
+        } elseif (mysqli_num_rows($check_email) > 0) {
+            $message = 'Email Already exists!';
+        } else {
+
+            $mql = "INSERT INTO users(username,f_name,l_name,email,phone,password,address) VALUES('" . $_POST['username'] . "','" . $_POST['firstname'] . "','" . $_POST['lastname'] . "','" . $_POST['email'] . "','" . $_POST['phone'] . "','" . md5($_POST['password']) . "','" . $_POST['address'] . "')";
+            mysqli_query($db, $mql);
+            $success = "Account Created successfully! <p>You will be redirected in <span id='counter'>5</span> second(s).</p>
 					<script type='text/javascript'>
 					    function countdown() {
 					    	var i = document.getElementById('counter');
@@ -62,10 +48,9 @@ if(isset($_POST['submit'] ))
 					    }
 					    setInterval(function(){ countdown(); },1000);
 					</script>'";
-		 header("refresh:3;url=login.php"); 
+            header("refresh:3;url=login.php");
+        }
     }
-	}
-
 }
 
 
@@ -86,113 +71,111 @@ if(isset($_POST['submit'] ))
     <link href="css/animsition.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet"> 
+    <link href="css/style.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
-    </head>
+</head>
+
 <body>
-     
-     <!--header starts-->
-     <header id="header" class="header-scroll top-header headrom headerBg">
+
+    <!--header starts-->
+    <header id="header" class="header-scroll top-header headrom headerBg">
         <!-- .navbar -->
         <nav class="navbar navbar-dark">
             <div class="container">
                 <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
-                <a class="navbar-brand" href="index.php"> Angkring</a>
+                <a class="navbar-brand" href="index.php"> Angkringan</a>
                 <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
                     <ul class="nav navbar-nav">
                         <li class="nav-item"> <a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a> </li>
                         <li class="nav-item"> <a class="nav-link active" href="restaurants.php">Restaurants <span class="sr-only"></span></a> </li>
-                        
-						<?php
-					if(empty($_SESSION["user_id"]))
-						{
-							echo '
+
+                        <?php
+                        if (empty($_SESSION["user_id"])) {
+                            echo '
                             <li class="nav-item"><a href="login.php" class="nav-link active">Login</a></li>
 						    <li class="nav-item"><a href="registration.php" class="nav-link active greenBg" style="padding: 10px 15px; border-radius: 3rem">Signup</a></li>';
-						}
-					else
-						{	
-							echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active">your orders</a> </li>';
-							echo  '<li class="nav-item"><a href="logout.php" class="nav-link active">logout</a> </li>';
-						}
-					?>
-						 
+                        } else {
+                            echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active">your orders</a> </li>';
+                            echo  '<li class="nav-item"><a href="logout.php" class="nav-link active">logout</a> </li>';
+                        }
+                        ?>
+
                     </ul>
                 </div>
             </div>
         </nav>
-    <!-- /.navbar -->
+        <!-- /.navbar -->
     </header>
     <div class="page-wrapper">
         <div class="breadcrumb">
-           <div class="container">
-              <ul>
-                 <li>
-                    <a href="#" class="active">
-				        <span style="color:g;"><?php echo $message; ?></span>
-				        <span style="color:green;">
-					    <?php echo $success; ?>
-				        </span>
-				    </a>
-                </li>
-              </ul>
-           </div>
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="#" class="active">
+                            <span style="color:g;"><?php echo $message; ?></span>
+                            <span style="color:green;">
+                                <?php echo $success; ?>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
         <section class="contact-page inner-page">
             <div class="container">
-              <div class="row">
-                 <!-- REGISTER -->
-                <div class="col-md-8">
-                    <div class="widget">
-                       <div class="widget-body">
-					  <form action="" method="post">
-                             <div class="row">
-						  <div class="form-group col-sm-12">
-                                   <label for="exampleInputEmail1">Username</label>
-                                   <input class="form-control" type="text" name="username" id="example-text-input" placeholder="Username"> 
-                                </div>
-                                <div class="form-group col-sm-6">
-                                   <label for="exampleInputEmail1">First Name</label>
-                                   <input class="form-control" type="text" name="firstname" id="example-text-input" placeholder="First Name"> 
-                                </div>
-                                <div class="form-group col-sm-6">
-                                   <label for="exampleInputEmail1">Last Name</label>
-                                   <input class="form-control" type="text" name="lastname" id="example-text-input-2" placeholder="Last Name"> 
-                                </div>
-                                <div class="form-group col-sm-6">
-                                   <label for="exampleInputEmail1">Email address</label>
-                                   <input type="text" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> <small id="emailHelp" class="form-text text-muted">We"ll never share your email with anyone else.</small> 
-                                </div>
-                                <div class="form-group col-sm-6">
-                                   <label for="exampleInputEmail1">Phone number</label>
-                                   <input class="form-control" type="text" name="phone" id="example-tel-input-3" placeholder="Phone"> <small class="form-text text-muted">We"ll never share your email with anyone else.</small> 
-                                </div>
-                                <div class="form-group col-sm-6">
-                                   <label for="exampleInputPassword1">Password</label>
-                                   <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password"> 
-                                </div>
-                                <div class="form-group col-sm-6">
-                                   <label for="exampleInputPassword1">Repeat password</label>
-                                   <input type="password" class="form-control" name="cpassword" id="exampleInputPassword2" placeholder="Password"> 
-                                </div>
-							 <div class="form-group col-sm-12">
-                                   <label for="exampleTextarea">Delivery Address</label>
-                                   <textarea class="form-control" id="exampleTextarea"  name="address" rows="3"></textarea>
-                                </div>
-                             </div>
-                             <div class="row">
-                                <div class="col-sm-4">
-                                   <p> <input type="submit" value="Register" name="submit" class="btn input theme-btn"> </p>
-                                </div>
-                             </div> 
-                          </form>
-                       
-				   </div>
-                       <!-- end: Widget -->
+                <div class="row">
+                    <!-- REGISTER -->
+                    <div class="col-md-12">
+                        <div class="widget">
+                            <div class="widget-body">
+                                <form action="" method="post">
+                                    <div class="row">
+                                        <div class="form-group col-sm-12">
+                                            <label for="exampleInputEmail1">Username</label>
+                                            <input class="form-control" type="text" name="username" id="example-text-input" placeholder="Username">
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <label for="exampleInputEmail1">First Name</label>
+                                            <input class="form-control" type="text" name="firstname" id="example-text-input" placeholder="First Name">
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <label for="exampleInputEmail1">Last Name</label>
+                                            <input class="form-control" type="text" name="lastname" id="example-text-input-2" placeholder="Last Name">
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="text" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> <small id="emailHelp" class="form-text text-muted">We"ll never share your email with anyone else.</small>
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <label for="exampleInputEmail1">Phone number</label>
+                                            <input class="form-control" type="text" name="phone" id="example-tel-input-3" placeholder="Phone"> <small class="form-text text-muted">We"ll never share your email with anyone else.</small>
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <label for="exampleInputPassword1">Repeat password</label>
+                                            <input type="password" class="form-control" name="cpassword" id="exampleInputPassword2" placeholder="Password">
+                                        </div>
+                                        <div class="form-group col-sm-12">
+                                            <label for="exampleTextarea">Delivery Address</label>
+                                            <textarea class="form-control" id="exampleTextarea" name="address" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <p> <input type="submit" value="Register" name="submit" class="btn input theme-btn"> </p>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                            <!-- end: Widget -->
+                        </div>
+                        <!-- /REGISTER -->
                     </div>
-                    <!-- /REGISTER -->
-                </div>    
-            </div>
+                </div>
         </section>
 
         <!-- FOOTER SECTION ----------------------- -->
@@ -201,15 +184,15 @@ if(isset($_POST['submit'] ))
                 <div class="footerIntro">
                     <div class="footerLogoDiv">
                         <span class="hotelName">
-                            Angkring<span>..</span>
+                            Angkringan<span>..</span>
                         </span>
                     </div>
-                    <p>Angkring adalah sebuah website yang menawarkan pengiriman makanan via online di restoran favorite mu.</p>
+                    <p>Angkringan adalah sebuah website yang menawarkan pengiriman makanan via online di restoran favorite mu.</p>
 
                     <div class="footContactDetails">
                         <div class="info">
-                            <div class="iconDiv"><i class='bx bx-mail-send' ></i></div>
-                            <span>Angkring@gmail.com</span>
+                            <div class="iconDiv"><i class='bx bx-mail-send'></i></div>
+                            <span>Angkringan@gmail.com</span>
                         </div>
 
                         <div class="info">
@@ -218,7 +201,7 @@ if(isset($_POST['submit'] ))
                         </div>
 
                         <div class="info">
-                            <div class="iconDiv"><i class='bx bx-current-location' ></i></div>
+                            <div class="iconDiv"><i class='bx bx-current-location'></i></div>
                             <span>jl.blok duku, jakarta timur</span>
                         </div>
                     </div>
@@ -265,10 +248,10 @@ if(isset($_POST['submit'] ))
             </div>
         </section>
         <!-- FOOTER SECTION END----------------- -->
-         
+
     </div>
-        
-      
+
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <script src="js/jquery.min.js"></script>

@@ -53,7 +53,7 @@ if (empty($_SESSION["user_id"])) {
                 <nav class="navbar navbar-dark">
                     <div class="container">
                         <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
-                        <a class="navbar-brand" href="index.php"> Angkring </a>
+                        <a class="navbar-brand" href="index.php"> Angkringan </a>
                         <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
                             <ul class="nav navbar-nav">
                                 <li class="nav-item"> <a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a> </li>
@@ -166,15 +166,15 @@ if (empty($_SESSION["user_id"])) {
                 <div class="footerIntro">
                     <div class="footerLogoDiv">
                         <span class="hotelName">
-                            Angkring<span>..</span>
+                            Angkringan<span>..</span>
                         </span>
                     </div>
-                    <p>Angkring adalah sebuah website yang menawarkan pengiriman makanan via online di restoran favorite mu.</p>
+                    <p>Angkringan adalah sebuah website yang menawarkan pengiriman makanan via online di restoran favorite mu.</p>
 
                     <div class="footContactDetails">
                         <div class="info">
                             <div class="iconDiv"><i class='bx bx-mail-send'></i></div>
-                            <span>Angkring@gmail.com</span>
+                            <span>Angkringan@gmail.com</span>
                         </div>
 
                         <div class="info">

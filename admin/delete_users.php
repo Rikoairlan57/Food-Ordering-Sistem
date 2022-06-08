@@ -4,6 +4,4 @@ error_reporting(0);
 session_start();
 
 mysqli_query($db,"DELETE FROM users WHERE u_id = '".$_GET['user_del']."'");
-header("location:allusers.php");  
-
-?>
+header("location:allusers.php");
