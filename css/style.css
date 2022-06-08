@@ -1011,3 +1011,14 @@ footer li a {
     margin-bottom: 25px;
   }
 }
+
+/* ==========================
+*  Inner pages
+============================*/
+
+.inner-page-hero {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+
