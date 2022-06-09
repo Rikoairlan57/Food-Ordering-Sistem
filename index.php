@@ -36,7 +36,7 @@ session_start();
         <div class="hero-inner">
             <div class="container text-center hero-text font-white">
                 <h1>Food Order Website </h1>
-                <h5 class="font-white space-xs">Top restaurants and specials in town</h5>
+                <h5 class="font-white space-xs">Top restaurants and Favorite Your Foods</h5>
                 <div class="banner-form">
                     <form class="form-inline">
                         <div class="form-group">

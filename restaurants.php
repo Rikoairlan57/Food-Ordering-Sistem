@@ -75,7 +75,7 @@ session_start();
                 <!-- restaurants listing starts -->
                 <div class="row">
                     <div class="restaurant-listing">
-                        <?php  //fetching records from table and filter using html data-filter tag
+                        <?php
                         $ress = mysqli_query($db, "select * from restaurant");
                         while ($rows = mysqli_fetch_array($ress)) {
                             $query = mysqli_query($db, "select * from res_category where c_id='" . $rows['c_id'] . "' ");
@@ -92,8 +92,8 @@ session_start();
 												<div class="bottom-part">
 													<div class="cost"><i class="fa fa-check"></i> Min Rp.30000</div>
 													<div class="mins"><i class="fa fa-motorcycle"></i> 30 min</div>
-													<div class="ratings" style="color: yellow;"> 
-                                                        <span>
+													<div class="ratings" > 
+                                                        <span">
 															<i class="fa fa-star"></i>
 															<i class="fa fa-star"></i>
 															<i class="fa fa-star"></i>

@@ -415,7 +415,7 @@ hr {
 }
 
 .link-item.active span {
-  background-color: rgb(0, 188, 126);
+  background-color: rgb(0, 128, 0);
   color: #fff;
 }
 
@@ -439,7 +439,7 @@ hr {
 }
 
 .links li:hover span {
-  background-color: rgb(5, 161, 109);
+  background-color: rgb(0, 100, 0);
   color: #fff;
 }
 
@@ -1150,7 +1150,7 @@ Steps
 }
 
 .featured-restaurants .ratings span i {
-  color: #f30;
+  color: #FFFF00;
 }
 
 .restaurants-filter ul li {
@@ -1230,128 +1230,7 @@ Steps
 @media (min-width: 1200px) {
 }
 
-/*-----------------------------------  
-App section
------------------------------------*/
 
-.app-section {
-  padding-top: 35px;
-  position: relative;
-}
-
-.app-section:after {
-  content: "";
-  background: url(../images/city-2.png) center bottom;
-  background-color: rgb(0, 188, 126);
-  display: block;
-  position: absolute;
-  top: 100px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  background-repeat: repeat-x;
-}
-
-.app-wrap {
-  position: relative;
-  z-index: 2;
-}
-
-@media (min-width: 280px) and (max-width: 568px) {
-  .app-wrap {
-    padding-bottom: 30px;
-  }
-}
-
-.app-wrap figure {
-  margin: 0;
-  text-align: center;
-}
-
-.app-wrap .left-text {
-  padding-top: 110px;
-}
-
-.app-wrap .left-text h3,
-.app-wrap .left-text p {
-  color: #fff;
-}
-
-/* ==========================
-*  Download app buttons
-============================*/
-
-.app-btn {
-  color: #ffffff;
-  float: left;
-  margin-right: 15px;
-  background: #81858b;
-  margin-top: 5px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 2px;
-  transition: all 0.3s;
-}
-
-.app-btn i {
-  font-size: 38px;
-  line-height: 50px;
-  margin: 0px;
-  padding: 0 18px;
-}
-
-.app-btn .pull-right {
-  padding: 8px 25px 8px 10px;
-}
-
-.app-btn .text {
-  display: block;
-  font-size: 12px;
-  line-height: 1;
-}
-
-.app-btn:hover,
-.app-btn:active,
-.app-btn:focus {
-  color: #ffffff;
-  background: #111111;
-}
-
-.android-button {
-  background: #82b21c;
-}
-
-@media (min-width: 348px) and (max-width: 767px) {
-  .app-section {
-    padding: 55px 0;
-  }
-  .text-img-block figure {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .app-wrap .left-text {
-    padding-top: 100px;
-    font-size: 80%;
-  }
-  .app-btn i {
-    font-size: 28px;
-    line-height: 41px;
-    margin: 0px;
-    padding: 0 18px;
-  }
-  .app-btn {
-    padding-right: 5px;
-  }
-  .app-btn .pull-right {
-    padding: 7px 14px 0 5px;
-  }
-  .app-btn i {
-    padding: 0 10px;
-  }
-}
 
 /* ==========================
 *  Footer

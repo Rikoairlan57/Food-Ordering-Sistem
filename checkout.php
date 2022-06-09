@@ -110,12 +110,18 @@ if (empty($_SESSION["user_id"])) {
                                                 <ul class=" list-unstyled">
                                                     <li>
                                                         <label class="custom-control custom-radio  m-b-20">
-                                                            <input name="mod" id="radioStacked1" checked value="COD" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Payment on delivery</span>
-                                                            <br> <span>Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</span> </label>
+                                                            <input name="mod" id="radioStacked1" checked value="COD" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Cash on delivery</span>
+                                                            <br> <span>Please send your check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</span> </label>
                                                     </li>
                                                     <li>
                                                         <label class="custom-control custom-radio  m-b-10">
-                                                            <input name="mod" type="radio" value="paypal" disabled class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Paypal <img src="images/paypal.jpg" alt="" width="90"></span> </label>
+                                                            <input name="mod" type="radio" value="paypal" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description"><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/buy-logo-small.png" alt="Beli sekarang dengan PayPal" width="250"></span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="custom-control custom-radio  m-b-10">
+                                                            <input name="mod" type="radio" value="gopay" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description"><img src="images/gopay.png" alt="" width="200"></span>
+                                                        </label>
                                                     </li>
                                                 </ul>
                                                 <p class="text-xs-center"> <input type="submit" onclick="return confirm('Are you sure?');" name="submit" class="btn btn-outline-success btn-block" value="Order now"> </p>
