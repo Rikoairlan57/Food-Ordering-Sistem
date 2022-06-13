@@ -21,5 +21,3 @@ alur Pengerjaan
 10. Membuat Cart ✔
 11. Membuat Halaman Order User ✔
 12. Membuat Halaman Checkout User ✔
-
-Link desain : https://www.figma.com/file/cM0kJZtD6QwsgngggcmCC7/Food-Ordering-Sistem?node-id=0%3A1
