@@ -8,12 +8,7 @@ session_start();
 
 
 
-if (isset($_POST['submit']))           //if upload btn is pressed
-{
-
-
-
-
+if (isset($_POST['submit'])) {
 
 
 

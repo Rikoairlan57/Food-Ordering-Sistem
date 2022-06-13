@@ -111,7 +111,7 @@ if (isset($_POST['submit'])) {
                                             </div>
                                             <div class="form-actions">
                                                 <input type="submit" name="submit" class="btn btn-success" value="Save" style="background: rgb(0, 188, 126);">
-                                                <a href="dashboard.php" class="btn btn-warning">Back</a>
+                                                <a href="add_category.php" class="btn btn-warning">Back</a>
                                             </div>
                                     </form>
                                 </div>

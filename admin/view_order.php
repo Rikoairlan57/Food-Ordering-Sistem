@@ -136,20 +136,20 @@ session_start();
                                                 if ($status == "" or $status == "NULL") {
                                                 ?>
                                                     <td>
-                                                        <center><button type="button" class="btn btn-info" style="font-weight:bold;"><span class="fa fa-bars" aria-hidden="true">Dispatch</button></center>
+                                                        <center><button type="button" class="btn btn-info" style="font-weight:bold;"><span class="fa fa-bars" aria-hidden="true">Memasak</button></center>
                                                     </td>
                                                 <?php
                                                 }
-                                                if ($status == "in process") { ?>
+                                                if ($status == "Sedang Di antar") { ?>
                                                     <td>
-                                                        <center><button type="button" class="btn btn-warning"><span class="fa fa-cog fa-spin" aria-hidden="true"></span>On a Way!</button></center>
+                                                        <center><button type="button" class="btn btn-warning"><span class="fa fa-cog fa-spin" aria-hidden="true"></span>Sedang Di antar</button></center>
                                                     </td>
                                                 <?php
                                                 }
-                                                if ($status == "closed") {
+                                                if ($status == "Datang") {
                                                 ?>
                                                     <td>
-                                                        <center><button type="button" class="btn btn-success"><span class="fa fa-check-circle" aria-hidden="true">Delivered</button></center>
+                                                        <center><button type="button" class="btn btn-success"><span class="fa fa-check-circle" aria-hidden="true">Datang</button></center>
                                                     </td>
                                                 <?php
                                                 }

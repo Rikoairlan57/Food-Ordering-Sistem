@@ -37,19 +37,8 @@ session_start();
         <div class="hero-inner">
             <div class="container text-center hero-text font-white">
                 <h1>Food Order Website </h1>
-                <h5 class="font-white space-xs">Top restaurants and Favorite Your Foods</h5>
-                <div class="banner-form">
-                    <form class="form-inline">
-                        <div class="form-group">
-                            <label class="sr-only" for="exampleInputAmount">I would like to eat....</label>
-                            <div class="form-group">
-                                <input type="text" class="input form-control form-control-lg" id="exampleInputAmount" placeholder="Enter Search...">
-                            </div>
-                        </div>
-                        <button onclick="location.href='dishes.php'" type="button" class="btn input ">Search food</button>
-                    </form>
-                </div>
-                <div class="steps">
+                <h5 class="font-white space-xs">Makan enak nggak perlu capek</h5>
+                <div class="p-3 steps">
                     <div class="step-item step1">
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 483 483" width="512" height="512">
                             <g fill="#FFF">

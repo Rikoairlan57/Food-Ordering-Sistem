@@ -52,7 +52,7 @@ if (isset($_POST['submit'])) {
     <link href="css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/helper.css" rel="stylesheet">
-    <link href="./css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
@@ -119,7 +119,6 @@ if (isset($_POST['submit'])) {
                                             </div>
                                             <div class="form-actions">
                                                 <input type="submit" name="submit" class="btn btn-success" value="Save" style="background: rgb(0, 188, 126);">
-                                                <a href="dashboard.php" class="btn btn-inverse">Cancel</a>
                                             </div>
                                     </form>
                                 </div>
@@ -139,7 +138,7 @@ if (isset($_POST['submit'])) {
                                     <table id="myTable" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
-                                                <th>ID#</th>
+                                                <th>ID</th>
                                                 <th>Category Name</th>
                                                 <th>Date</th>
                                                 <th>Action</th>
@@ -161,7 +160,7 @@ if (isset($_POST['submit'])) {
                                                     echo ' <tr><td>' . $rows['c_id'] . '</td>
 																				<td>' . $rows['c_name'] . '</td>
 																				<td>' . $rows['date'] . '</td>
-																				<td><a href="delete_category.php?cat_del=' . $rows['c_id'] . '" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fa-solid fa-trash" style="font-size:16px"></i></a> 
+																				<td><a href="includes/delete/delete_category.php?cat_del=' . $rows['c_id'] . '" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fa-solid fa-trash" style="font-size:16px"></i></a> 
 																				<a href="update_category.php?cat_upd=' . $rows['c_id'] . '" " class="btn btn-info btn-flat btn-addon btn-sm m-b-10 m-l-5" style="background: rgb(0, 188, 126);"><i class="fa-solid fa-gear"></i></a>
 																				</td>
                                                                             </tr>';

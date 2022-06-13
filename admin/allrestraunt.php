@@ -56,7 +56,6 @@ session_start();
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">All stores data</h4>
-                                <h6 class="card-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
 
                                 <div class="table-responsive m-t-40">
                                     <table id="" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
@@ -77,23 +76,6 @@ session_start();
 
                                             </tr>
                                         </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Cat</th>
-                                                <th>Store-Name</th>
-                                                <th>Email</th>
-                                                <th>Phone</th>
-                                                <th>Url</th>
-
-                                                <th>Open Hrs</th>
-                                                <th>Close Hrs</th>
-                                                <th>Open Days</th>
-                                                <th>Address</th>
-                                                <th>Store-Image</th>
-                                                <th>Date</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </tfoot>
                                         <tbody>
                                             <?php
                                             $sql = "SELECT * FROM restaurant order by rs_id desc";
@@ -126,7 +108,7 @@ session_start();
 																					</div></td>
 																					
 																					<td>' . $rows['date'] . '</td>
-																					<td><a href="delete_stores.php?res_del=' . $rows['rs_id'] . '" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fa-solid fa-trash" style="font-size:16px"></i></a> 
+																					<td><a href="includes/delete/delete_stores.php?res_del=' . $rows['rs_id'] . '" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fa-solid fa-trash" style="font-size:16px"></i></a> 
 																					<a href="update_restraunt.php?res_upd=' . $rows['rs_id'] . '" class="btn btn-info btn-flat btn-addon btn-sm m-b-10 m-l-5" style="background: rgb(0, 188, 126);"><i class="fa-solid fa-gear"></i></a>
 																					</td>
                                                                                 </tr>';
