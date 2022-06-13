@@ -23,6 +23,7 @@ session_start();
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
 </head>
 
 <body class="home">
@@ -137,7 +138,7 @@ session_start();
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/headroom.js"></script>
     <script src="js/foodpicky.min.js"></script>
-    <script src="js/isratech.js"></script>
+    <script src="js/theme.js"></script>
 
 </body>
 

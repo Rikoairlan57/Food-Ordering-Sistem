@@ -45,11 +45,12 @@ if (empty($_SESSION["user_id"])) {
     </head>
 
     <body>
+        <!--header starts-->
+        <?php include("includes/navbar.php"); ?>
+        <!-- header end -->
 
         <div class="site-wrapper">
-            <!--header starts-->
-            <?php include("includes/navbar.php") ?>
-            <!-- header end -->
+            
 
             <div class="page-wrapper">
                 <div class="top-links">
@@ -141,12 +142,13 @@ if (empty($_SESSION["user_id"])) {
 
 
 
-        <!-- FOOTER SECTION ----------------------- -->
-        <?php include("includes/footer.php"); ?>
-        <!-- FOOTER SECTION END----------------- -->
         </div>
         <!-- end:page wrapper -->
         </div>
+        
+        <!-- FOOTER SECTION ----------------------- -->
+        <?php include("includes/footer.php"); ?>
+        <!-- FOOTER SECTION END----------------- -->
 
         <!-- Bootstrap core JavaScript
     ================================================== -->

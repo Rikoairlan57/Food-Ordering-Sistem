@@ -99,7 +99,7 @@ if (isset($_POST['submit'])) {
 
                         <div class="col-lg-12">
                             <div class="card card-outline-primary">
-                                <div class="card-header" style="background: rgb(0, 188, 126);">
+                                <div class="card-header" style="background: rgb(0, 128, 0);">
                                     <h4 class="m-b-0 text-white">Add Restaurant Category</h4>
                                 </div>
                                 <div class="card-body">

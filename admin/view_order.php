@@ -108,7 +108,7 @@ session_start();
                                             <tr>
                                                 <td><strong>Price:</strong></td>
                                                 <td>
-                                                    <center>$<?php echo $rows['price']; ?></center>
+                                                    <center>Rp.<?php echo $rows['price']; ?></center>
                                                 </td>
 
 

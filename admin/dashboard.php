@@ -42,6 +42,7 @@ if (empty($_SESSION["adm_id"])) {
             <!-- start header  -->
             <?php include("includes/header.php"); ?>
             <!-- End header header -->
+            <!-- start left sidebar -->
             <?php include("includes/sidebar.php"); ?>
             <!-- End Left Sidebar  -->
             <!-- Page wrapper  -->
